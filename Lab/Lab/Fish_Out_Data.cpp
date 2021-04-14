@@ -17,4 +17,6 @@ void Fish::Out_Data(ofstream& ofst) {
     {
         ofst << "Ocean" << endl;
     }
+
+    ofst << "Fish's age is " << Age << endl;
 }
