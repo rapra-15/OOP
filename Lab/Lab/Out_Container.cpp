@@ -10,6 +10,7 @@ void Container::Out(ofstream& ofst) {
         {
             ofst << i << ": ";
             Head->Cont->Out_Data(ofst);
+            ofst << "Amount of symbols in the name of animal = " << Head->Cont->Amount() << endl;
             Head = Head->Next;
         }
     }
