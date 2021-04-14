@@ -150,6 +150,10 @@
     <ClCompile Include="Compare.cpp" />
     <ClCompile Include="Fish_In_Data.cpp" />
     <ClCompile Include="Fish_Out_Data.cpp" />
+    <ClCompile Include="Get_Beast.cpp" />
+    <ClCompile Include="Get_Bird.cpp" />
+    <ClCompile Include="Get_Cont.cpp" />
+    <ClCompile Include="Get_Fish.cpp" />
     <ClCompile Include="Init_Container.cpp" />
     <ClCompile Include="In_Animal.cpp" />
     <ClCompile Include="In_Container.cpp" />
@@ -158,6 +162,10 @@
     <ClCompile Include="Out_Only_Fish.cpp" />
     <ClCompile Include="Out_Only_Fish_Animal.cpp" />
     <ClCompile Include="Out_Only_Fish_Container.cpp" />
+    <ClCompile Include="Set_Beast.cpp" />
+    <ClCompile Include="Set_Bird.cpp" />
+    <ClCompile Include="Set_Cont.cpp" />
+    <ClCompile Include="Set_Fish.cpp" />
     <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>

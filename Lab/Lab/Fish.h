@@ -23,6 +23,15 @@ class Fish : public Animal {
     Habitat H;
     int Age;
 public:
+    string Get_Name();
+    void Set_Name(string _Name);
+
+    Habitat Get_H();
+    void Set_H(int _H);
+
+    int Get_Age();
+    void Set_Age(int _Age);
+
     void In_Data(ifstream& ifst); //Функция ввода информации о рыбе
     void Out_Data(ofstream& ofst); //Функция вывода информации о рыбе
     int Amount();

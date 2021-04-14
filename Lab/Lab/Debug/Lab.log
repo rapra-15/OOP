@@ -9,14 +9,24 @@
   Compare.cpp
   Fish_In_Data.cpp
   Fish_Out_Data.cpp
+  Get_Beast.cpp
+  Get_Bird.cpp
+  Get_Cont.cpp
+  Get_Fish.cpp
   Init_Container.cpp
   In_Animal.cpp
   In_Container.cpp
   Lab.cpp
   Out_Container.cpp
+  Создание кода...
+  Компиляция...
   Out_Only_Fish.cpp
   Out_Only_Fish_Animal.cpp
   Out_Only_Fish_Container.cpp
+  Set_Beast.cpp
+  Set_Bird.cpp
+  Set_Cont.cpp
+  Set_Fish.cpp
   Sort.cpp
   Создание кода...
   Lab.vcxproj -> C:\Users\of913\OneDrive\Документы\GitHub\OOP\Lab\Debug\Lab.exe
