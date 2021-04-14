@@ -13,4 +13,6 @@ void Bird::Out_Data(ofstream& ofst) {
     {
         ofst << "No" << endl;
     }
+
+    ofst << "Bird's age is " << Age << endl;
 }

@@ -20,4 +20,6 @@ void Fish::In_Data(ifstream& ifst) {
     {
         H = Fish::OCEAN;
     }
+    
+    ifst >> Age;
 }
