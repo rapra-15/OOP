@@ -1,4 +1,6 @@
-﻿  Bird_In_Data.cpp
+﻿  Beast_In_Data.cpp
+  Beast_Out_Data.cpp
+  Bird_In_Data.cpp
   Bird_Out_Data.cpp
   Clear_Container.cpp
   Fish_In_Data.cpp
