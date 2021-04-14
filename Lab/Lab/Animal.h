@@ -15,6 +15,7 @@ public:
                                               //о животном, она будет определена для
                                               //каждого класса животного
     virtual int Amount() = 0;
+    bool Compare(Animal* other);
 protected:
     Animal() {};
 };

@@ -3,6 +3,7 @@
   Bird_In_Data.cpp
   Bird_Out_Data.cpp
   Clear_Container.cpp
+  Compare.cpp
   Fish_In_Data.cpp
   Fish_Out_Data.cpp
   Init_Container.cpp
@@ -10,5 +11,6 @@
   In_Container.cpp
   Lab.cpp
   Out_Container.cpp
+  Sort.cpp
   Создание кода...
   Lab.vcxproj -> C:\Users\of913\OneDrive\Документы\GitHub\OOP\Lab\Debug\Lab.exe

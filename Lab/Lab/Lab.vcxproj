@@ -144,6 +144,7 @@
     <ClCompile Include="Bird_In_Data.cpp" />
     <ClCompile Include="Bird_Out_Data.cpp" />
     <ClCompile Include="Clear_Container.cpp" />
+    <ClCompile Include="Compare.cpp" />
     <ClCompile Include="Fish_In_Data.cpp" />
     <ClCompile Include="Fish_Out_Data.cpp" />
     <ClCompile Include="Init_Container.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="In_Container.cpp" />
     <ClCompile Include="Lab.cpp" />
     <ClCompile Include="Out_Container.cpp" />
+    <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
