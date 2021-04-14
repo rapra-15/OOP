@@ -139,8 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Amount_Beast.cpp" />
     <ClCompile Include="Amount_Bird.cpp" />
     <ClCompile Include="Amount_Fish.cpp" />
+    <ClCompile Include="Beast_In_Data.cpp" />
+    <ClCompile Include="Beast_Out_Data.cpp" />
     <ClCompile Include="Bird_In_Data.cpp" />
     <ClCompile Include="Bird_Out_Data.cpp" />
     <ClCompile Include="Clear_Container.cpp" />
@@ -156,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
+    <ClInclude Include="Beast.h" />
     <ClInclude Include="Bird.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="Fish.h" />
