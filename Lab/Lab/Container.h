@@ -15,6 +15,7 @@ public:
     void Out(ofstream& ofst); //Функция вывода элемента из контейнера
     void Clear(); //Функция очищения контейнера
     void Sort();
+    void Out_Only_Fish(ofstream& ofst);
     Container(); //Конструктор (по сути инициализатор контейнера)
     ~Container() { Clear(); } //Деструктор
 };

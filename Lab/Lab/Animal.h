@@ -16,6 +16,7 @@ public:
                                               //каждого класса животного
     virtual int Amount() = 0;
     bool Compare(Animal* other);
+    virtual void Out_Only_Fish(ofstream& ofst);
 protected:
     Animal() {};
 };

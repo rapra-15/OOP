@@ -155,6 +155,9 @@
     <ClCompile Include="In_Container.cpp" />
     <ClCompile Include="Lab.cpp" />
     <ClCompile Include="Out_Container.cpp" />
+    <ClCompile Include="Out_Only_Fish.cpp" />
+    <ClCompile Include="Out_Only_Fish_Animal.cpp" />
+    <ClCompile Include="Out_Only_Fish_Container.cpp" />
     <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
