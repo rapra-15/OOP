@@ -21,6 +21,7 @@ class Beast : public Animal {
     };
 
     Beast_Type B_T;
+    int Age;
 public:
     void In_Data(ifstream& ifst); //Функция ввода информации о рыбе
     void Out_Data(ofstream& ofst); //Функция вывода информации о рыбе

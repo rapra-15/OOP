@@ -16,4 +16,6 @@ void Beast::Out_Data(ofstream& ofst) {
     {
         ofst << "Insectivorous" << endl;
     }
+
+    ofst << "Beast's age is " << Age << endl;
 }

@@ -20,4 +20,6 @@ void Beast::In_Data(ifstream& ifst) {
     {
         B_T = Beast::INSECTIVOROUS;
     }
+
+    ifst >> Age;
 }
