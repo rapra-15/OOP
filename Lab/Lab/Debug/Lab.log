@@ -8,5 +8,8 @@
   In_Container.cpp
   Lab.cpp
   Out_Container.cpp
+  Out_Only_Fish.cpp
+  Out_Only_Fish_Animal.cpp
+  Out_Only_Fish_Container.cpp
   Создание кода...
   Lab.vcxproj -> C:\Users\of913\OneDrive\Документы\GitHub\OOP\Lab\Debug\Lab.exe

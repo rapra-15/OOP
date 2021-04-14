@@ -23,6 +23,8 @@ int main(int argc, char* argv[])
     ofst << "Filled container. " << endl;
     c.Out(ofst);
 
+    c.Out_Only_Fish(ofst);
+
     c.Clear();
     ofst << "Empty container. " << endl;
     c.Out(ofst);

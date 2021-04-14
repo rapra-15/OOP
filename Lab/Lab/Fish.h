@@ -24,6 +24,7 @@ class Fish : public Animal {
 public:
     void In_Data(ifstream& ifst); //Функция ввода информации о рыбе
     void Out_Data(ofstream& ofst); //Функция вывода информации о рыбе
+    void Out_Only_Fish(ofstream& ofst);
     Fish() {};
 };
 

@@ -14,6 +14,7 @@ public:
     virtual void Out_Data(ofstream& ofst) = 0; //Чисто вирутальная функция вывода информации
                                               //о животном, она будет определена для
                                               //каждого класса животного
+    virtual void Out_Only_Fish(ofstream& ofst);
 protected:
     Animal() {};
 };
