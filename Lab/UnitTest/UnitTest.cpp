@@ -62,39 +62,92 @@ namespace UnitTest
 			F_exp->Set_H((int)OCEAN);
 			F_exp->Set_Age(13);
 
-			struct Local_Cont
-			{
-				Node* Head;
-				int Len;
-			};
-
-			Local_Cont* L_C = new Local_Cont;
-
-			L_C->Head = new Node;
-			L_C->Head->Cont = (Animal*)F_exp;
-			L_C->Head->Next = L_C->Head;
-			L_C->Len = 1;
-
-			Container Cont_Exp;
-
-			Cont_Exp.Set_Head(L_C->Head);
-			Cont_Exp.Set_Len(L_C->Len);
+			Animal* An_act = new Fish;
 
 			ifstream ifst("../Lab/in_fish.txt");
 
-			Container Cont_Act;
+			An_act->In_Data(ifst);
 
-			Cont_Act.In(ifst);
-
-			Fish* F_act = (Fish*)Cont_Act.Get_Head()->Cont;
-
-			Assert::AreEqual(Cont_Exp.Get_Len(), Cont_Act.Get_Len());
-
-			Assert::AreEqual(F_exp->Get_Name(), F_act->Get_Name());
-			Assert::AreEqual((int)F_exp->Get_H(), (int)F_act->Get_H());
-			Assert::AreEqual(F_exp->Get_Age(), F_act->Get_Age());
+			Assert::AreEqual(F_exp->Get_Name(), ((Fish*)An_act)->Get_Name());
+			Assert::AreEqual((int)F_exp->Get_H(), (int)((Fish*)An_act)->Get_H());
+			Assert::AreEqual(F_exp->Get_Age(), ((Fish*)An_act)->Get_Age());
 		}
-		TEST_METHOD(Out_Bird_Text)
+		TEST_METHOD(In_Bird_Test)
+		{
+
+			enum  Habitat {
+				RIVER,
+				SEA,
+				OCEAN
+			};
+
+			Bird* B_exp = new Bird;
+
+			B_exp->Set_Name("Bird13");
+			B_exp->Set_Migration(true);
+			B_exp->Set_Age(4);
+
+			Animal* An_act = new Bird;
+
+			ifstream ifst("../Lab/in_bird.txt");
+
+			An_act->In_Data(ifst);
+
+			Assert::AreEqual(B_exp->Get_Name(), ((Bird*)An_act)->Get_Name());
+			Assert::AreEqual((int)B_exp->Get_Migration(), (int)((Bird*)An_act)->Get_Migration());
+			Assert::AreEqual(B_exp->Get_Age(), ((Bird*)An_act)->Get_Age());
+		}
+		TEST_METHOD(In_Beast_Test)
+		{
+
+			enum  Habitat {
+				RIVER,
+				SEA,
+				OCEAN
+			};
+
+			Beast* B_exp = new Beast;
+
+			B_exp->Set_Name("Beast1");
+			B_exp->Set_B_T(2);
+			B_exp->Set_Age(18);
+
+			Animal* An_act = new Beast;
+
+			ifstream ifst("../Lab/in_beast.txt");
+
+			An_act->In_Data(ifst);
+
+			Assert::AreEqual(B_exp->Get_Name(), ((Beast*)An_act)->Get_Name());
+			Assert::AreEqual((int)B_exp->Get_B_T(), (int)((Beast*)An_act)->Get_B_T());
+			Assert::AreEqual(B_exp->Get_Age(), ((Beast*)An_act)->Get_Age());
+		}
+		TEST_METHOD(Out_Fish_Test)
+		{
+			Fish* F_act = new Fish;
+
+			F_act->Set_Name("Fish7");
+			F_act->Set_H(0);
+			F_act->Set_Age(11);
+
+			Animal* An_act = new Fish;
+			An_act = F_act;
+
+			ofstream ofst("../Lab/out_fish_act.txt");
+
+			An_act->Out_Data(ofst);
+
+			ifstream ifst_exp("../Lab/out_fish_exp.txt");
+			ifstream ifst_act("../Lab/out_fish_act.txt");
+
+			string Exp;
+			getline(ifst_exp, Exp, '\0');
+			string Act;
+			getline(ifst_act, Act, '\0');
+
+			Assert::AreEqual(Exp, Act);
+		}
+		TEST_METHOD(Out_Bird_Test)
 		{
 			Bird* B_act = new Bird;
 
@@ -102,30 +155,40 @@ namespace UnitTest
 			B_act->Set_Migration(true);
 			B_act->Set_Age(7);
 
-			struct Local_Cont
-			{
-				Node* Head;
-				int Len;
-			};
-
-			Local_Cont* L_C = new Local_Cont;
-
-			L_C->Head = new Node;
-			L_C->Head->Cont = (Animal*)B_act;
-			L_C->Head->Next = L_C->Head;
-			L_C->Len = 1;
-
-			Container Cont_Act;
-
-			Cont_Act.Set_Head(L_C->Head);
-			Cont_Act.Set_Len(L_C->Len);
+			Animal* An_act = new Bird;
+			An_act = B_act;
 
 			ofstream ofst("../Lab/out_bird_act.txt");
 
-			Cont_Act.Out(ofst);
+			An_act->Out_Data(ofst);
 
 			ifstream ifst_exp("../Lab/out_bird_exp.txt");
 			ifstream ifst_act("../Lab/out_bird_act.txt");
+
+			string Exp;
+			getline(ifst_exp, Exp, '\0');
+			string Act;
+			getline(ifst_act, Act, '\0');
+
+			Assert::AreEqual(Exp, Act);
+		}
+		TEST_METHOD(Out_Beast_Test)
+		{
+			Beast* B_act = new Beast;
+
+			B_act->Set_Name("Beast89");
+			B_act->Set_B_T(0);
+			B_act->Set_Age(23);
+
+			Animal* An_act = new Beast;
+			An_act = B_act;
+
+			ofstream ofst("../Lab/out_beast_act.txt");
+
+			An_act->Out_Data(ofst);
+
+			ifstream ifst_exp("../Lab/out_beast_exp.txt");
+			ifstream ifst_act("../Lab/out_beast_act.txt");
 
 			string Exp;
 			getline(ifst_exp, Exp, '\0');
@@ -140,18 +203,12 @@ namespace UnitTest
 
 			B->Set_Name("Beast1");
 
-			struct Local_Cont
-			{
-				Node* Head;
-			};
-
-			Local_Cont* L_C = new Local_Cont;
-
-			L_C->Head = new Node();
-			L_C->Head->Cont = (Animal*)B;
+			Animal* An = new Beast;
+			An = B;
 
 			int Amount_exp = 6;
-			int Amount_act = L_C->Head->Cont->Amount();
+			int Amount_act = An->Amount();
+
 			Assert::AreEqual(Amount_exp, Amount_act);
 		}
 		TEST_METHOD(Compare_Test)
@@ -160,27 +217,16 @@ namespace UnitTest
 
 			B->Set_Name("Beast1");
 
+			Animal* An_First = B;
+
 			Fish* F = new Fish;
 
 			F->Set_Name("Fish1");
 
-			struct Local_Cont
-			{
-				Node* Head;
-			};
+			Animal* An_Second = F;
 
-			Local_Cont* L_C_First = new Local_Cont;
-
-			L_C_First->Head = new Node();
-			L_C_First->Head->Cont = (Animal*)B;
-
-			Local_Cont* L_C_Second = new Local_Cont;
-
-			L_C_Second->Head = new Node();
-			L_C_Second->Head->Cont = (Animal*)F;
-
-			bool Act = L_C_First->Head->Cont->Compare(L_C_Second->Head->Cont);
 			bool Exp = true;
+			bool Act = An_First->Compare(An_Second);
 
 			Assert::AreEqual(Exp, Act);
 		}
